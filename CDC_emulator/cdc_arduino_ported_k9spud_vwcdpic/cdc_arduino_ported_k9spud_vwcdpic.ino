@@ -77,7 +77,7 @@
 /* enable bluetooth module control over serial line
  * XS3868
  */
-//#define BLUETOOTH
+#define BLUETOOTH
 
 /*
  * read disc# track# status over serial line
