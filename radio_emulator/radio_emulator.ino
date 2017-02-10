@@ -135,239 +135,239 @@ void loop() {
   //    if (key != oldkey)
   
   // !!! debug loop print !!!
-  delay(50);
-  // NEXT SONG
-  send_cmd(CDC_NEXT);
-  send_cmd(CDC_END_CMD);
-  delay(1500);
-  // PREVIOUS SONG
-  send_cmd(CDC_PREV);
-  send_cmd(CDC_END_CMD);
-  delay(1500);
+  //  delay(50);
+  //  // NEXT SONG
+  //  send_cmd(CDC_NEXT);
+  //  send_cmd(CDC_END_CMD);
+  //  delay(2000);
+  //  // PREVIOUS SONG
+  //  send_cmd(CDC_PREV);
+  //  send_cmd(CDC_END_CMD);
+  //  delay(2000);
   // !!! debug loop print !!!
   
   
-//  if (Serial.available() > 0)
-//  {
-//    // read the incoming byte:
-//    incomingByte = Serial.read();
-//    //     oldkey = key;
-//    switch (incomingByte)
-//    {
-//    case '=':
-//      // NEXT SONG
-//      send_cmd(CDC_NEXT);
-//      send_cmd(CDC_END_CMD);
-//      break;
-//    case ']':
-//      // NEXT CD
-//      send_cmd(CDC_END_CMD2);
-//      send_cmd(CDC_END_CMD);
-//      break;
-//    case '[':
-//      // PREVIOUS CD
-//      send_cmd(CDC_PREV_CD);
-//      send_cmd(CDC_END_CMD);
-//      break;
-//    case '-':
-//      // PREVIOUS SONG
-//      send_cmd(CDC_PREV);
-//      send_cmd(CDC_END_CMD);
-//      break;
-//    case 'p':
-//      // PLAY/PAUSE
-//      play=!play;
-//      if (play){
-//        send_cmd(CDC_PLAY);
-//        send_cmd(CDC_END_CMD);
-//      }
-//      else
-//      {
-//        send_cmd(CDC_STOP);
-//        send_cmd(CDC_END_CMD);
-//      }
-//      break;
-//    case '1':
-//      // CD 1
-//      send_cmd(CDC_CD1);
-//      send_cmd(CDC_END_CMD2);      
-//      break;
-//    case '2':
-//      // CD 2
-//      send_cmd(CDC_CD2);
-//      send_cmd(CDC_END_CMD2);      
-//      break;
-//    case '3':
-//      // CD 3
-//      send_cmd(CDC_CD3);
-//      send_cmd(CDC_END_CMD2);      
-//      break;
-//    case '4':
-//      // CD 4
-//      send_cmd(CDC_CD4);
-//      send_cmd(CDC_END_CMD2);      
-//      break;
-//    case '5':
-//      // CD 5
-//      send_cmd(CDC_CD5);
-//      send_cmd(CDC_END_CMD2);      
-//      break;
-//    case '6':
-//      // CD 1
-//      send_cmd(CDC_CD6);
-//      send_cmd(CDC_END_CMD2);      
-//      break;
-//      // seek forward            f
-//      // seek rewind             r
-//      // scan mode               s
-//      // shuffle mode            h
-//    case 'f':
-//      //  seek frward
-//      send_cmd(CDC_SEEK_FWD);
-//      send_cmd(CDC_PLAY);
-//      send_cmd(CDC_END_CMD2);      
-//      break;
-//    case 'r':
-//      // seek rewind
-//      send_cmd(CDC_SEEK_RWD);
-//      send_cmd(CDC_PLAY);
-//      send_cmd(CDC_END_CMD2);      
-//      break;
-//    case 's':
-//      // scan
-//      send_cmd(CDC_SCAN);
-//      break;
-//    case 'l':
-//      // shuffle
-//      send_cmd(CDC_SFL);
-//      break;
-//    case 'v': //verbose
-//      verbose=!verbose;
-//    break;
-//    case 'h': //help
-//      Serial.println("next track button       =");
-//      Serial.println("previous track button   -");
-//      Serial.println("next CD                 ]");
-//      Serial.println("previous CD             [");
-//      Serial.println("play/stop               p");
-//      Serial.println("CD1                     1");
-//      Serial.println("CD2                     2");
-//      Serial.println("CD3                     3");
-//      Serial.println("CD4                     4");
-//      Serial.println("CD5                     5");
-//      Serial.println("CD6                     6");
-//      Serial.println("seek forward            f");
-//      Serial.println("seek rewind             r");
-//      Serial.println("scan mode               s");
-//      Serial.println("shuffle mode            l");
-//      Serial.println("help                    h");   
-//    }    
-//    //    lcd.home();
-//    //    lcd.clear();
-//    //    if (play){
-//    //      lcd.print("cd ");
-//    //      lcd.print(cdpointer+1);
-//    //      lcd.print(" play");
-//    //    }
-//    //    else
-//    //    {
-//    //      lcd.print("cd ");
-//    //      lcd.print(cdpointer+1);
-//    //      lcd.print(" pause");
-//    //    }
-//    //    lcd.setCursor(0, 1);
-//    //    lcd.print("tr ");
-//    //    lcd.print(tr);   
-//  }
+  if (Serial.available() > 0)
+  {
+    // read the incoming byte:
+    incomingByte = Serial.read();
+    //     oldkey = key;
+    switch (incomingByte)
+    {
+    case '=':
+      // NEXT SONG
+      send_cmd(CDC_NEXT);
+      send_cmd(CDC_END_CMD);
+      break;
+    case ']':
+      // NEXT CD
+      send_cmd(CDC_END_CMD2);
+      send_cmd(CDC_END_CMD);
+      break;
+    case '[':
+      // PREVIOUS CD
+      send_cmd(CDC_PREV_CD);
+      send_cmd(CDC_END_CMD);
+      break;
+    case '-':
+      // PREVIOUS SONG
+      send_cmd(CDC_PREV);
+      send_cmd(CDC_END_CMD);
+      break;
+    case 'p':
+      // PLAY/PAUSE
+      play=!play;
+      if (play){
+        send_cmd(CDC_PLAY);
+        send_cmd(CDC_END_CMD);
+      }
+      else
+      {
+        send_cmd(CDC_STOP);
+        send_cmd(CDC_END_CMD);
+      }
+      break;
+    case '1':
+      // CD 1
+      send_cmd(CDC_CD1);
+      send_cmd(CDC_END_CMD2);      
+      break;
+    case '2':
+      // CD 2
+      send_cmd(CDC_CD2);
+      send_cmd(CDC_END_CMD2);      
+      break;
+    case '3':
+      // CD 3
+      send_cmd(CDC_CD3);
+      send_cmd(CDC_END_CMD2);      
+      break;
+    case '4':
+      // CD 4
+      send_cmd(CDC_CD4);
+      send_cmd(CDC_END_CMD2);      
+      break;
+    case '5':
+      // CD 5
+      send_cmd(CDC_CD5);
+      send_cmd(CDC_END_CMD2);      
+      break;
+    case '6':
+      // CD 1
+      send_cmd(CDC_CD6);
+      send_cmd(CDC_END_CMD2);      
+      break;
+      // seek forward            f
+      // seek rewind             r
+      // scan mode               s
+      // shuffle mode            h
+    case 'f':
+      //  seek frward
+      send_cmd(CDC_SEEK_FWD);
+      send_cmd(CDC_PLAY);
+      send_cmd(CDC_END_CMD2);      
+      break;
+    case 'r':
+      // seek rewind
+      send_cmd(CDC_SEEK_RWD);
+      send_cmd(CDC_PLAY);
+      send_cmd(CDC_END_CMD2);      
+      break;
+    case 's':
+      // scan
+      send_cmd(CDC_SCAN);
+      break;
+    case 'l':
+      // shuffle
+      send_cmd(CDC_SFL);
+      break;
+    case 'v': //verbose
+      verbose=!verbose;
+    break;
+    case 'h': //help
+      Serial.println("next track button       =");
+      Serial.println("previous track button   -");
+      Serial.println("next CD                 ]");
+      Serial.println("previous CD             [");
+      Serial.println("play/stop               p");
+      Serial.println("CD1                     1");
+      Serial.println("CD2                     2");
+      Serial.println("CD3                     3");
+      Serial.println("CD4                     4");
+      Serial.println("CD5                     5");
+      Serial.println("CD6                     6");
+      Serial.println("seek forward            f");
+      Serial.println("seek rewind             r");
+      Serial.println("scan mode               s");
+      Serial.println("shuffle mode            l");
+      Serial.println("help                    h");   
+    }    
+    //    lcd.home();
+    //    lcd.clear();
+    //    if (play){
+    //      lcd.print("cd ");
+    //      lcd.print(cdpointer+1);
+    //      lcd.print(" play");
+    //    }
+    //    else
+    //    {
+    //      lcd.print("cd ");
+    //      lcd.print(cdpointer+1);
+    //      lcd.print(" pause");
+    //    }
+    //    lcd.setCursor(0, 1);
+    //    lcd.print("tr ");
+    //    lcd.print(tr);   
+  }
 
-//  if(newcmd && prev_cmd != cmd && cmd!=0)
-//  {
-//    prev_cmd=cmd;
-//    newcmd=0;      
-//   // TIMSK1 |= _BV(OCIE1A);
-//    //    for(int b=56;b>-1;b=b-8){
-//    //      uint8_t temp=((cmd>>b) & 0xFF);
-//    //      Serial.print(temp,HEX);
-//    ////      Serial.print(" ");
-//    //    }
-//    uint8_t temp;
-//    if (verbose){
-//    temp=((cmd>>56) & 0xFF);
-//    Serial.print(temp,HEX);
-//    temp=((cmd>>48) & 0xFF);
-//    Serial.print(temp,HEX);
-//    cd=temp;
-//    temp=((cmd>>40) & 0xFF);
-//    Serial.print(temp,HEX);
-//    tr=temp;
-//    temp=((cmd>>32) & 0xFF);
-//    Serial.print(temp,HEX);
-//    minutes=temp;
-//    temp=((cmd>>24) & 0xFF);
-//    Serial.print(temp,HEX);
-//    sec=temp;
-//    temp=((cmd>>16) & 0xFF);
-//    Serial.print(temp,HEX);
-//    mode=temp;
-//    temp=((cmd>>8) & 0xFF);
-//    Serial.print(temp,HEX);
-//    temp=(cmd & 0xFF);
-//    Serial.print(temp,HEX);
-//    Serial.print("   CD: ");
-//    Serial.print(cd,HEX);
-//    Serial.print(" track: ");
-//    Serial.print(tr,HEX);
-//    Serial.print("   min: ");
-//    Serial.print(minutes,HEX  );
-//    Serial.print(" sek: ");
-//    Serial.print(sec,HEX);
-//    Serial.print(" mode: ");
-//    Serial.println(mode,HEX);
-//    }
-//    else 
-//    {
-//    Serial.print("   CD: ");
-//    Serial.print(int (((cmd>>48) & 0xFF)^0xBF),HEX);
-//    Serial.print(" track: ");
-//    Serial.print(int (((cmd>>40) & 0xFF)^0xFF),HEX);
-//    Serial.print("   min: ");
-//    Serial.print(int (((cmd>>32) & 0xFF)^0xFF),HEX);
-//    Serial.print(" sek: ");
-//    Serial.print(int (((cmd>>24) & 0xFF)^0xFF),HEX);
-//    Serial.print(" mode: ");
-//    Serial.print(int (((cmd>>16) & 0xFF)),HEX);
-//    Serial.println();
-//    }
-//
-//  }
-//
-//  if (newcmd && prev_cmd == cmd)
-//  {
-//    newcmd=0;
-//  }
-//  
-//  if (newcmd && cmd==0)
-//  {
-//    newcmd=0;
-//  }
-//  
-//  while (txoutptr != txinptr)
-//
-//  {
-//
-//    Serial.println(txbuffer[txoutptr]);
-//
-//
-//    txoutptr++;
-//
-//    if (txoutptr == TX_BUFFER_END)
-//
-//    {
-//      txoutptr = 0;
-//
-//    }
-//
-//  }
+  if(newcmd && prev_cmd != cmd && cmd!=0)
+  {
+    prev_cmd=cmd;
+    newcmd=0;      
+   // TIMSK1 |= _BV(OCIE1A);
+    //    for(int b=56;b>-1;b=b-8){
+    //      uint8_t temp=((cmd>>b) & 0xFF);
+    //      Serial.print(temp,HEX);
+    ////      Serial.print(" ");
+    //    }
+    uint8_t temp;
+    if (verbose){
+    temp=((cmd>>56) & 0xFF);
+    Serial.print(temp,HEX);
+    temp=((cmd>>48) & 0xFF);
+    Serial.print(temp,HEX);
+    cd=temp;
+    temp=((cmd>>40) & 0xFF);
+    Serial.print(temp,HEX);
+    tr=temp;
+    temp=((cmd>>32) & 0xFF);
+    Serial.print(temp,HEX);
+    minutes=temp;
+    temp=((cmd>>24) & 0xFF);
+    Serial.print(temp,HEX);
+    sec=temp;
+    temp=((cmd>>16) & 0xFF);
+    Serial.print(temp,HEX);
+    mode=temp;
+    temp=((cmd>>8) & 0xFF);
+    Serial.print(temp,HEX);
+    temp=(cmd & 0xFF);
+    Serial.print(temp,HEX);
+    Serial.print("   CD: ");
+    Serial.print(cd,HEX);
+    Serial.print(" track: ");
+    Serial.print(tr,HEX);
+    Serial.print("   min: ");
+    Serial.print(minutes,HEX  );
+    Serial.print(" sek: ");
+    Serial.print(sec,HEX);
+    Serial.print(" mode: ");
+    Serial.println(mode,HEX);
+    }
+    else 
+    {
+    Serial.print("   CD: ");
+    Serial.print(int (((cmd>>48) & 0xFF)^0xBF),HEX);
+    Serial.print(" track: ");
+    Serial.print(int (((cmd>>40) & 0xFF)^0xFF),HEX);
+    Serial.print("   min: ");
+    Serial.print(int (((cmd>>32) & 0xFF)^0xFF),HEX);
+    Serial.print(" sek: ");
+    Serial.print(int (((cmd>>24) & 0xFF)^0xFF),HEX);
+    Serial.print(" mode: ");
+    Serial.print(int (((cmd>>16) & 0xFF)),HEX);
+    Serial.println();
+    }
+
+  }
+
+  if (newcmd && prev_cmd == cmd)
+  {
+    newcmd=0;
+  }
+  
+  if (newcmd && cmd==0)
+  {
+    newcmd=0;
+  }
+  
+  while (txoutptr != txinptr)
+
+  {
+
+    Serial.println(txbuffer[txoutptr]);
+
+
+    txoutptr++;
+
+    if (txoutptr == TX_BUFFER_END)
+
+    {
+      txoutptr = 0;
+
+    }
+
+  }
  // Serial.println("loop");
 
 }  
