@@ -82,7 +82,7 @@
 /*
  * read disc# track# status over serial line
  */
-#define DISC_TRACK_NUMBER_FROM_MPD
+//#define DISC_TRACK_NUMBER_FROM_MPD
 
 /* -- Includes ------------------------------------------------------------- */
 
